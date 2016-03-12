@@ -13,7 +13,7 @@
     "entity/orbit_controller",
     "entity/entity_init_args",
     "entity/camera_component",
-    "physics//physics",
+    "physics/physics",
     "world/world",
     "particles/particle_system_provider",
     "particles/particle_system",

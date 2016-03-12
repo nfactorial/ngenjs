@@ -1,9 +1,5 @@
 "use strict";
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 /**
  * nGen is a game framework for JavaScript.
  * This framework is intended to be agnostic of rendering engine used, though there is currently
@@ -11,6 +7,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  *
  * (c)2015 nfactorial
  */
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var NgenCore = function () {
     function NgenCore() {
@@ -343,8 +343,6 @@ var NgenCore = function () {
 }();
 
 var NGEN = new NgenCore();
-
-//# sourceMappingURL=ngen-compiled.js.map
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -371,6 +369,7 @@ var GameSystem = function () {
     value: function onInitialize(initArgs) {}
     //
 
+
     /**
      * Called by the framework when it is time to shutdown.
      */
@@ -379,6 +378,7 @@ var GameSystem = function () {
     key: "onShutdown",
     value: function onShutdown() {}
     //
+
 
     /**
      * Called by the framework when it is time to perform any per-frame processing.
@@ -394,8 +394,6 @@ var GameSystem = function () {
 
   return GameSystem;
 }();
-
-//# sourceMappingURL=game_system-compiled.js.map
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -424,8 +422,6 @@ var Range = function () {
 
     return Range;
 }();
-
-//# sourceMappingURL=range-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -468,8 +464,6 @@ var InitArgs = function () {
 
     return InitArgs;
 }();
-
-//# sourceMappingURL=init_args-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -583,8 +577,6 @@ var StateTree = function () {
 
     return StateTree;
 }();
-
-//# sourceMappingURL=state_tree-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -757,8 +749,6 @@ var GameState = function () {
 
     return GameState;
 }();
-
-//# sourceMappingURL=game_state-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -835,8 +825,6 @@ var KeyboardHandler = function (_GameSystem) {
 }(GameSystem);
 
 NGEN.system('KeyboardHandler', KeyboardHandler);
-
-//# sourceMappingURL=keyboard-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -995,8 +983,6 @@ MouseHandler.MiddleButton = 1;
 MouseHandler.RightButton = 2;
 
 NGEN.system('MouseHandler', MouseHandler);
-
-//# sourceMappingURL=mouse-compiled.js.map
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1037,8 +1023,6 @@ var Component = function () {
 
   return Component;
 }();
-
-//# sourceMappingURL=component-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1121,8 +1105,6 @@ var Entity = function () {
 
     return Entity;
 }();
-
-//# sourceMappingURL=entity-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1212,8 +1194,6 @@ var OrbitController = function (_Component) {
 OrbitController.TWO_PI = Math.PI * 2;
 OrbitController.INVERT_Y = false;
 OrbitController.MOUSE_SENSITIVITY = 0.1;
-
-//# sourceMappingURL=orbit_controller-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1286,8 +1266,6 @@ var EntityInitArgs = function () {
 
     return EntityInitArgs;
 }();
-
-//# sourceMappingURL=entity_init_args-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1376,8 +1354,6 @@ var CameraComponent = function (_Component) {
 
     return CameraComponent;
 }(Component);
-
-//# sourceMappingURL=camera_component-compiled.js.map
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1626,12 +1602,459 @@ Physics.Primitive = function (_Component) {
 }(Component);
 
 NGEN.system("Physics", Physics);
+'use strict';
 
-//# sourceMappingURL=physics-compiled.js.map
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var WorldBase = function (_GameSystem) {
+    _inherits(WorldBase, _GameSystem);
+
+    function WorldBase() {
+        _classCallCheck(this, WorldBase);
+
+        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(WorldBase).call(this));
+
+        _this.entityMap = new Map();
+        _this.activeObjects = [];
+
+        _this.entityInitArgs = new EntityInitArgs();
+        return _this;
+    }
+
+    _createClass(WorldBase, [{
+        key: 'onInitialize',
+        value: function onInitialize(initArgs) {
+            this.initializeEntities(initArgs);
+        }
+
+        /**
+         * Called by the framework when it is time to perform any per-frame processing.
+         * @param updateArgs Support methods and properties for use during update.
+         */
+
+    }, {
+        key: 'onUpdate',
+        value: function onUpdate(updateArgs) {
+            // TODO: Objects are not updated like this (they're updated by their controlling system object)
+            var count = this.activeObjects.length;
+            for (var loop = 0; loop < count; ++loop) {
+                this.activeObjects[loop].onUpdate(updateArgs);
+            }
+        }
+
+        /**
+         * Retrieves an Entity object that has been associated with a specified name.
+         * @param name {String} Name of the entity to be retrieved.
+         * @returns {Entity} The entity associated with the specified name, if one could not be found this method returns undefined.
+         */
+
+    }, {
+        key: 'getEntity',
+        value: function getEntity(name) {
+            return this.entityMap.get(name);
+        }
+
+        /**
+         * Adds a new entity to the world and associates it with a specified name.
+         * @param name {String} Name to be associated with the entity.
+         * @param entity {Entity} The entity to be added to the scene.
+         */
+
+    }, {
+        key: 'addEntity',
+        value: function addEntity(name, entity) {
+            if (!name) {
+                throw new Error('Unable to add entity to world without a valid name.');
+            }
+
+            if (!entity) {
+                throw new Error('Null entity cannot be added to world.');
+            }
+
+            if (this.entityMap.get(name)) {
+                throw new Error('Unable to add entity \'' + name + '\', name already in use.');
+            }
+
+            this.entityMap.set(name, entity);
+        }
+
+        /**
+         * Invokes the onInitialize method for all entities contained within the World object.
+         * @param initArgs
+         */
+
+    }, {
+        key: 'initializeEntities',
+        value: function initializeEntities(initArgs) {
+            var _this2 = this;
+
+            this.entityInitArgs.world = this;
+            this.entityInitArgs.gameState = initArgs.gameState;
+
+            this.entityMap.forEach(function (e) {
+                _this2.entityInitArgs.entity = e;
+                e.onInitialize(_this2.entityInitArgs);
+            });
+        }
+    }]);
+
+    return WorldBase;
+}(GameSystem);
+
+var EditorWorld = function (_WorldBase) {
+    _inherits(EditorWorld, _WorldBase);
+
+    function EditorWorld() {
+        _classCallCheck(this, EditorWorld);
+
+        var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(EditorWorld).call(this));
+
+        _this3.camera = null;
+        _this3.geometryProvider = null;
+        _this3.particleProvider = null;
+        return _this3;
+    }
+
+    _createClass(EditorWorld, [{
+        key: 'onInitialize',
+        value: function onInitialize(initArgs) {
+            this.geometryProvider = initArgs.getSystem('GeometryProvider');
+            this.particleProvider = initArgs.getSystem('ParticleSystemProvider');
+
+            var entity = new Entity();
+
+            var x = 30.0 + (Math.random() * 5.0 - 5.0);
+            var z = 30.0 + (Math.random() * 5.0 - 5.0);
+
+            entity.addComponent('Geometry', this.geometryProvider.createGeometry({
+                shape: 'ConstructionPlane',
+                //color: 0xFFBB22222,
+                color: 0xFFFF22222,
+                width: 2.0,
+                height: 2.0,
+                depth: 2.0
+            }));
+
+            this.addEntity('constructionPlane', entity);
+
+            this.createController(initArgs);
+            this.createTest(initArgs);
+
+            // TEMP
+            NGEN.scene.add(this.particleProvider.getParticleSystem('Test').mesh);
+
+            _get(Object.getPrototypeOf(EditorWorld.prototype), 'onInitialize', this).call(this, initArgs);
+        }
+
+        /**
+         * Called by the framework when it is time to perform any per-frame processing.
+         * @param updateArgs Support methods and properties for use during update.
+         */
+
+    }, {
+        key: 'onUpdate',
+        value: function onUpdate(updateArgs) {
+            _get(Object.getPrototypeOf(EditorWorld.prototype), 'onUpdate', this).call(this, updateArgs);
+
+            // TEMP
+            this.camera.getCameraArgs(updateArgs.camera);
+        }
+    }, {
+        key: 'createController',
+        value: function createController(initArgs) {
+            // TODO: Eventually components will be created via a system object factory method.
+            // TODO: So, we will call <system object>.createComponent( 'PlayerController' ) instead of creating it directly.
+            // TODO: Further than that, our components will be specified in the definition file, so they will not be hard-coded like this.
+
+            var entity = new Entity();
+
+            entity.addComponent('Controller', new OrbitController()); // TODO: Player controller copies physics position to render object
+            entity.addComponent('Camera', new CameraComponent());
+
+            //this.activeObjects.push( tempEntity );
+            this.activeObjects.push(entity.getComponent('Controller'));
+            this.activeObjects.push(entity.getComponent('Camera'));
+
+            this.camera = entity.getComponent('Camera'); // TEMP
+
+            this.addEntity('controller', entity);
+        }
+    }, {
+        key: 'createTest',
+        value: function createTest(initArgs) {
+            this.particleProvider.createPointParticleSystem('Test');
+
+            var entity = new Entity();
+
+            entity.addComponent('Emitter', this.particleProvider.getParticleSystem('Test').createEmitter());
+
+            this.addEntity('emitter', entity);
+        }
+    }, {
+        key: 'initializeEntities',
+        value: function initializeEntities(initArgs) {
+            var _this4 = this;
+
+            this.entityInitArgs.world = this;
+            this.entityInitArgs.gameState = initArgs.gameState;
+
+            this.entityMap.forEach(function (e) {
+                _this4.entityInitArgs.entity = e;
+                e.onInitialize(_this4.entityInitArgs);
+            });
+        }
+    }]);
+
+    return EditorWorld;
+}(WorldBase);
+
+/**
+ * This object is used to manage all the dynamic objects in the current game world.
+ */
 
 
-//# sourceMappingURL=world-compiled.js.map
-"use strict";
+var World = function (_GameSystem2) {
+    _inherits(World, _GameSystem2);
+
+    function World() {
+        _classCallCheck(this, World);
+
+        var _this5 = _possibleConstructorReturn(this, Object.getPrototypeOf(World).call(this));
+
+        _this5.entityMap = new Map();
+        _this5.activeObjects = [];
+        _this5.physics = null;
+        _this5.camera = null;
+        _this5.particleProvider = null;
+        _this5.geometryProvider = null;
+        _this5.entityInitArgs = new EntityInitArgs();
+        return _this5;
+    }
+
+    /**
+     * Called by the framework once all system objects have been created and the game is ready to begin play.
+     * @param initArgs Object providing initialization support methods.
+     */
+
+
+    _createClass(World, [{
+        key: 'onInitialize',
+        value: function onInitialize(initArgs) {
+            this.physics = initArgs.getSystem('Physics'); // TODO: This will eventually be obtained from configuration
+            this.geometryProvider = initArgs.getSystem('GeometryProvider');
+            this.particleProvider = initArgs.getSystem('ParticleSystemProvider');
+
+            this.createParticles(initArgs);
+
+            // These are temporary functions, eventually they will be defined within a scene json file.
+            this.createPlayer(initArgs);
+            this.createMonsters(initArgs);
+            this.createLargeMonsters(initArgs);
+            this.createTest(initArgs);
+
+            this.initializeEntities(initArgs);
+        }
+    }, {
+        key: 'createParticles',
+        value: function createParticles(initArgs) {
+            this.particleProvider.createPointParticleSystem('Test');
+            this.particleProvider.createLineParticleSystem('Test2');
+        }
+
+        /**
+         * Development function that spawns the player on the map.
+         * @param initArgs
+         */
+
+    }, {
+        key: 'createPlayer',
+        value: function createPlayer(initArgs) {
+            // TODO: Eventually components will be created via a system object factory method.
+            // TODO: So, we will call <system object>.createComponent( 'PlayerController' ) instead of creating it directly.
+            // TODO: Further than that, our components will be specified in the definition file, so they will not be hard-coded like this.
+
+            var entity = new Entity();
+
+            entity.addComponent('Physics', this.physics.createBox(1, 2, 1));
+            entity.addComponent('Geometry', this.geometryProvider.createGeometry({
+                shape: 'Box',
+                width: 1,
+                height: 2,
+                depth: 1
+            }));
+            entity.addComponent('Controller', new PlayerController()); // TODO: Player controller copies physics position to render object
+            entity.addComponent('Camera', new CameraComponent());
+            // Temporary - create ground
+            entity.addComponent('Ground', this.geometryProvider.createGeometry({
+                shape: 'Ground',
+                width: 300,
+                height: 300
+            }));
+
+            //this.activeObjects.push( tempEntity );
+            this.activeObjects.push(entity.getComponent('Controller'));
+            this.activeObjects.push(entity.getComponent('Camera'));
+
+            this.camera = entity.getComponent('Camera'); // TEMP
+
+            this.addEntity('player', entity);
+        }
+    }, {
+        key: 'createTest',
+        value: function createTest(initArgs) {
+            var entity = new Entity();
+
+            entity.addComponent('Emitter', this.particleProvider.getParticleSystem('Test').createEmitter());
+
+            this.addEntity('emitter', entity);
+        }
+
+        /**
+         * Development function that spawns a set of small monsters on the map.
+         * @param initArgs
+         */
+
+    }, {
+        key: 'createMonsters',
+        value: function createMonsters(initArgs) {
+            for (var loop = 0; loop < 4; ++loop) {
+                var entity = new Entity();
+
+                var dist = Math.random() * 2.0 + 5.0;
+                var angle = Math.random() * Math.PI * 2;
+
+                var x = 30.0 + Math.cos(angle) * dist;
+                var z = 30.0 + Math.sin(angle) * dist;
+
+                entity.addComponent('Physics', this.physics.createBox(0.5, 0.5, 0.5)).setPosition(x, 0.0, z);
+                entity.addComponent('Geometry', this.geometryProvider.createGeometry({
+                    shape: 'Monster',
+                    color: 0xFF662222,
+                    width: 0.5,
+                    height: 0.5,
+                    depth: 0.5
+                }));
+                entity.addComponent('Controller', new MonsterController());
+
+                this.activeObjects.push(entity.getComponent('Controller'));
+
+                this.addEntity('smonster' + loop, entity);
+            }
+        }
+
+        /**
+         * Development function that spawns a set of large monsters on the map.
+         * @param initArgs
+         */
+
+    }, {
+        key: 'createLargeMonsters',
+        value: function createLargeMonsters(initArgs) {
+            var entity = new Entity();
+
+            var x = 30.0 + (Math.random() * 5.0 - 5.0);
+            var z = 30.0 + (Math.random() * 5.0 - 5.0);
+
+            entity.addComponent('Physics', this.physics.createBox(2.0, 2.0, 2.0)).setPosition(x, 0.0, z);
+            entity.addComponent('Geometry', this.geometryProvider.createGeometry({
+                shape: 'Monster',
+                //color: 0xFFBB22222,
+                color: 0xFFFF22222,
+                width: 2.0,
+                height: 2.0,
+                depth: 2.0
+            }));
+            entity.addComponent('Controller', new MonsterController()).canJump = false;
+
+            this.activeObjects.push(entity.getComponent('Controller'));
+
+            this.addEntity('lmonster', entity);
+        }
+    }, {
+        key: 'initializeEntities',
+        value: function initializeEntities(initArgs) {
+            var _this6 = this;
+
+            this.entityInitArgs.world = this;
+            this.entityInitArgs.gameState = initArgs.gameState;
+
+            this.entityMap.forEach(function (e) {
+                _this6.entityInitArgs.entity = e;
+                e.onInitialize(_this6.entityInitArgs);
+            });
+
+            // TEMP
+            NGEN.scene.add(this.particleProvider.getParticleSystem('Test').mesh);
+        }
+
+        /**
+         * Adds a new entity to the world and associates it with a specified name.
+         * @param name {String} Name to be associated with the entity.
+         * @param entity {Entity} The entity to be added to the scene.
+         */
+
+    }, {
+        key: 'addEntity',
+        value: function addEntity(name, entity) {
+            if (!name) {
+                throw new Error('Unable to add entity to world without a valid name.');
+            }
+
+            if (!entity) {
+                throw new Error('Null entity cannot be added to world.');
+            }
+
+            if (this.entityMap.get(name)) {
+                throw new Error('Unable to add entity \'' + name + '\', name already in use.');
+            }
+
+            this.entityMap.set(name, entity);
+        }
+
+        /**
+         * Retrieves an Entity object that has been associated with a specified name.
+         * @param name {String} Name of the entity to be retrieved.
+         * @returns {Entity} The entity associated with the specified name, if one could not be found this method returns undefined.
+         */
+
+    }, {
+        key: 'getEntity',
+        value: function getEntity(name) {
+            return this.entityMap.get(name);
+        }
+
+        /**
+         * Called by the framework when it is time to perform any per-frame processing.
+         * @param updateArgs Support methods and properties for use during update.
+         */
+
+    }, {
+        key: 'onUpdate',
+        value: function onUpdate(updateArgs) {
+            // TODO: Objects are not updated like this (they're updated by their controlling system object)
+            var count = this.activeObjects.length;
+            for (var loop = 0; loop < count; ++loop) {
+                this.activeObjects[loop].onUpdate(updateArgs);
+            }
+
+            // TEMP
+            this.camera.getCameraArgs(updateArgs.camera);
+        }
+    }]);
+
+    return World;
+}(GameSystem);
+
+NGEN.system("EditorWorld", EditorWorld);
+NGEN.system("World", World);
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1668,6 +2091,7 @@ var ParticleSystemProvider = function (_GameSystem) {
         key: 'onInitialize',
         value: function onInitialize(initArgs) {}
         //
+
 
         /**
          * Deletes all particle systems within the provider and any associated GPU resources.
@@ -1736,8 +2160,6 @@ var ParticleSystemProvider = function (_GameSystem) {
 }(GameSystem);
 
 NGEN.system('ParticleSystemProvider', ParticleSystemProvider);
-
-//# sourceMappingURL=particle_system_provider-compiled.js.map
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1835,8 +2257,6 @@ var ParticleSystem = function () {
 
     return ParticleSystem;
 }();
-
-//# sourceMappingURL=particle_system-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2009,8 +2429,6 @@ var LineParticleSystem = function (_ParticleSystem) {
 
     return LineParticleSystem;
 }(ParticleSystem);
-
-//# sourceMappingURL=line_particle_system-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2295,8 +2713,6 @@ var ParticleEmitter = function (_Component) {
 
     return ParticleEmitter;
 }(Component);
-
-//# sourceMappingURL=particle_emitter-compiled.js.map
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2344,8 +2760,6 @@ var Particle = function () {
 
     return Particle;
 }();
-
-//# sourceMappingURL=particle-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2537,8 +2951,6 @@ var DisplayManager = function () {
 
     return DisplayManager;
 }();
-
-//# sourceMappingURL=display_manager-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2666,8 +3078,6 @@ var DisplayPort = function () {
 
     return DisplayPort;
 }();
-
-//# sourceMappingURL=display_port-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2830,8 +3240,6 @@ var DisplayResource = function () {
 }();
 
 DisplayResource.BackBufferName = 'backbuffer';
-
-//# sourceMappingURL=display_resource-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2892,8 +3300,6 @@ var DisplayPortDefinition = function () {
 
     return DisplayPortDefinition;
 }();
-
-//# sourceMappingURL=display_port_definition-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -2997,8 +3403,6 @@ var DisplayStage = function () {
 
     return DisplayStage;
 }();
-
-//# sourceMappingURL=display_stage-compiled.js.map
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3076,8 +3480,6 @@ var GeneratorBase = function () {
 
     return GeneratorBase;
 }();
-
-//# sourceMappingURL=generator_base-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3348,8 +3750,6 @@ var MapGenerator = function () {
 
     return MapGenerator;
 }();
-
-//# sourceMappingURL=bright_pass-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3421,8 +3821,6 @@ var BlurHorzGenerator = function (_GeneratorBase) {
 }(GeneratorBase);
 
 NGEN.generator('BlurHorz', BlurHorzGenerator);
-
-//# sourceMappingURL=blur_horz-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3494,8 +3892,6 @@ var BlurVertGenerator = function (_GeneratorBase) {
 }(GeneratorBase);
 
 NGEN.generator('BlurVert', BlurVertGenerator);
-
-//# sourceMappingURL=blur_vert-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3565,8 +3961,6 @@ var AddBlendGenerator = function (_GeneratorBase) {
 }(GeneratorBase);
 
 NGEN.generator('AddBlend', AddBlendGenerator);
-
-//# sourceMappingURL=add_blend-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3635,8 +4029,6 @@ var LinearScaleGenerator = function (_GeneratorBase) {
 }(GeneratorBase);
 
 NGEN.generator('LinearScale', LinearScaleGenerator);
-
-//# sourceMappingURL=linear_scale-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3724,8 +4116,6 @@ NGEN.generator('HdrGenerator', HdrGenerator);
 NGEN.Settings.HDR.W = 11.2;
 NGEN.Settings.HDR.Exposure = 0.18;
 NGEN.Settings.HDR.BloomStrength = 2.0;
-
-//# sourceMappingURL=hdr_generator-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3819,8 +4209,6 @@ var CopyGenerator = function (_GeneratorBase) {
 }(GeneratorBase);
 
 NGEN.generator('SimpleCopy', CopyGenerator);
-
-//# sourceMappingURL=copy_generator-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3866,8 +4254,6 @@ var SceneGenerator = function (_GeneratorBase) {
 }(GeneratorBase);
 
 NGEN.generator('SceneGenerator', SceneGenerator);
-
-//# sourceMappingURL=scene_generator-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3924,8 +4310,6 @@ var ShaderGenerator = function (_GeneratorBase) {
 }(GeneratorBase);
 
 NGEN.generator('ShaderGenerator', ShaderGenerator);
-
-//# sourceMappingURL=shader_generator-compiled.js.map
 "use strict";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3954,8 +4338,6 @@ var RenderArgs = function RenderArgs() {
     this.displayStage = null;
     this.displayManager = null;
 };
-
-//# sourceMappingURL=render_args-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -4198,8 +4580,6 @@ var GeometryComponentProvider = function (_GameSystem) {
 
 
 NGEN.system('GeometryProvider', GeometryComponentProvider);
-
-//# sourceMappingURL=geometry_provider_threejs-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -4258,8 +4638,6 @@ var ShaderProvider = function () {
 }();
 
 NGEN.system('ShaderProvider', ShaderProvider);
-
-//# sourceMappingURL=shader_provider-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -4323,8 +4701,6 @@ var MaterialProvider = function (_GameSystem) {
 }(GameSystem);
 
 NGEN.system('MaterialProvider', MaterialProvider);
-
-//# sourceMappingURL=material_provider-compiled.js.map
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -4385,5 +4761,3 @@ var MeshComponent = function (_Component) {
 
     return MeshComponent;
 }(Component);
-
-//# sourceMappingURL=mesh_component-compiled.js.map

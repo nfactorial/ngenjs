@@ -33,7 +33,7 @@ gulp.task('concat', function() {
     // in the future, some files need to be placed in a certain order
     // the ngen_files.json specifies that order.
     var concatList = fileList.map( e => {
-        return buildFolder + '/' + e + '-compiled.js';
+        return buildFolder + '/' + e + '.js';
     });
 
     return gulp.src(concatList)

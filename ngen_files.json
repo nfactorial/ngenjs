@@ -17,7 +17,7 @@
     "world/world",
     "particles/particle_system_provider",
     "particles/particle_system",
-    "particles/point_particle_system,",
+    "particles/point_particle_system",
     "particles/line_particle_system",
     "particles/particle_emitter",
     "particles/particle",

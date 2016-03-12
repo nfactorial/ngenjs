@@ -2270,6 +2270,161 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /**
+ * Represents a single particle system within the running title. A particle system provides many small
+ * elements that interact with the scene and are typically used to represent special effects.
+ */
+
+var PointParticleSystem = function (_ParticleSystem) {
+    _inherits(PointParticleSystem, _ParticleSystem);
+
+    function PointParticleSystem() {
+        _classCallCheck(this, PointParticleSystem);
+
+        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PointParticleSystem).call(this));
+
+        _this.center = new THREE.Vector3(0.0, 1.0, 0.0);
+        _this.calc = new THREE.Vector3();
+
+        // If using THREE.BufferGeometry, class contains a drawRange variable that contains start and count variables
+
+        //this.texture = THREE.ImageUtils.loadTexture( 'game/textures/particles/glow_1.jpg' );
+        //this.texture = THREE.ImageUtils.loadTexture( 'game/textures/particles/cloud_2.png' );
+        //this.texture = THREE.ImageUtils.loadTexture( 'game/textures/particles/fire_1.jpg' );
+        _this.texture = THREE.ImageUtils.loadTexture('game/textures/particles/fire_2.jpg'); // This one
+        //this.texture = THREE.ImageUtils.loadTexture( 'game/textures/particles/blue_ring.jpg' );
+        //this.texture = THREE.ImageUtils.loadTexture( 'game/textures/particles/flash_1.png' );
+        //this.texture = THREE.ImageUtils.loadTexture( 'game/textures/particles/tracer_sprite.jpg' );
+        //this.texture = THREE.ImageUtils.loadTexture( 'game/textures/particles/Particle_Cloud.png' );
+
+        _this.positions = new Float32Array(_this.maxParticles * 3); // x,y,z per particle
+        _this.sizes = new Float32Array(_this.maxParticles); // size per particle
+        _this.colors = new Float32Array(_this.maxParticles * 3); // Color of each particle
+        //this.colors = new Uint32Array( this.maxParticles );            // Color of each particle
+
+        _this.geometry = new THREE.BufferGeometry();
+        _this.geometry.addAttribute('position', new THREE.BufferAttribute(_this.positions, 3));
+        _this.geometry.addAttribute('customColor', new THREE.BufferAttribute(_this.colors, 3));
+        //this.geometry.addAttribute( 'color', new THREE.BufferAttribute( this.colors, 1 ) );
+        _this.geometry.addAttribute('size', new THREE.BufferAttribute(_this.sizes, 1));
+
+        _this.geometry.drawRange.count = 0;
+
+        _this.material = new THREE.ShaderMaterial({
+            uniforms: {
+                texture: { type: 't', value: _this.texture }
+            },
+            vertexShader: NGEN.shaderProvider.getShader('point_particle_vs'),
+            fragmentShader: NGEN.shaderProvider.getShader('point_particle_ps'),
+            depthWrite: false,
+            depthTest: true,
+            transparent: true,
+            blending: THREE.AdditiveBlending
+        });
+
+        /*        this.material = new THREE.PointsMaterial({
+         vertexColors: THREE.VertexColors,
+         depthWrite: false,
+         depthTest: true,
+         transparent: true,
+         blending: THREE.AdditiveBlending,
+         map: this.texture
+         });
+         */
+        _this.mesh = new THREE.Points(_this.geometry, _this.material);
+        return _this;
+    }
+
+    /**
+     * Called each frame when it is time to perform any per-frame processing.
+     * @param updateArgs
+     */
+
+
+    _createClass(PointParticleSystem, [{
+        key: 'onUpdate',
+        value: function onUpdate(updateArgs) {
+            _get(Object.getPrototypeOf(PointParticleSystem.prototype), 'onUpdate', this).call(this, updateArgs);
+
+            for (var loop = 0; loop < this.particleCount;) {
+                var particle = this.particles[loop];
+
+                particle.age += updateArgs.deltaTime;
+                if (particle.age >= particle.maxAge) {
+                    this.particles[loop] = this.particles[--this.particleCount];
+                    this.particles[this.particleCount] = particle;
+                } else {
+                    particle.force.x += this.gravity.x;
+                    particle.force.y += this.gravity.y;
+                    particle.force.z += this.gravity.z;
+
+                    // TODO: Apply other forces also
+                    /*this.calc.subVectors( this.position, particle.position );
+                     let d = this.calc.lengthSq();
+                     if ( d ) {
+                     d = 1.0 / Math.min( 1.0, Math.sqrt( d ) / 8.0 );   // 3.0 = max_dist
+                     this.calc.multiplyScalar( d * 4 );
+                      particle.force.add( this.calc );
+                     }*/
+
+                    particle.velocity.x += particle.force.x * updateArgs.deltaTime;
+                    particle.velocity.y += particle.force.y * updateArgs.deltaTime;
+                    particle.velocity.z += particle.force.z * updateArgs.deltaTime;
+
+                    particle.position.x += particle.velocity.x * updateArgs.deltaTime;
+                    particle.position.y += particle.velocity.y * updateArgs.deltaTime;
+                    particle.position.z += particle.velocity.z * updateArgs.deltaTime;
+
+                    particle.force.x = 0;
+                    particle.force.y = 0;
+                    particle.force.z = 0;
+
+                    ++loop;
+                }
+            }
+
+            // Copy particles into geometry
+            var count = this.particleCount;
+            //const positions = this.geometry.attributes.position.array;
+            for (var _loop = 0; _loop < count; ++_loop) {
+                var _particle = this.particles[_loop];
+                var t = _particle.age / _particle.maxAge;
+
+                this.positions[_loop * 3 + 0] = _particle.position.x;
+                this.positions[_loop * 3 + 1] = _particle.position.y;
+                this.positions[_loop * 3 + 2] = _particle.position.z;
+                this.sizes[_loop] = NgenCore.lerp(_particle.startSize, _particle.endSize, t);
+                var clr = NgenCore.lerp(_particle.startAlpha, _particle.endAlpha, t);
+
+                //this.colors[ loop ] = 0x88888888;
+                this.colors[_loop * 3 + 0] = clr;
+                this.colors[_loop * 3 + 1] = clr;
+                this.colors[_loop * 3 + 2] = clr;
+            }
+
+            this.geometry.attributes.position.needsUpdate = true;
+            this.geometry.attributes.customColor.needsUpdate = true;
+            this.geometry.attributes.size.needsUpdate = true;
+            //this.geometry.verticesNeedUpdate = true;
+            //this.geometry.colorsNeedUpdate = true;
+            this.geometry.setDrawRange(0, this.particleCount);
+        }
+    }]);
+
+    return PointParticleSystem;
+}(ParticleSystem);
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/**
  * Implements a particle system that represents particles as liens.
  * NOTE: Currently lines always face along the z-axis, however this will be improved in the future.
  */

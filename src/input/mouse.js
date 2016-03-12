@@ -74,6 +74,10 @@ class MouseHandler extends GameSystem {
         } else if ( e.button === 2 ) {
             this.rightDown = true;
         }
+
+        //if ( e.preventDefault ) {
+        //    e.preventDefault();
+        //}
     }
 
     onMouseLeave(e) {
@@ -94,6 +98,10 @@ class MouseHandler extends GameSystem {
         this.clientX = e.clientX;
         this.clientY = e.clientY;
         this.eventReceived = true;
+
+        //if ( e.preventDefault ) {
+        //    e.preventDefault();
+        //}
     }
 
     getDeltaX() {

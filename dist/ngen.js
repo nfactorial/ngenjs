@@ -923,6 +923,10 @@ var MouseHandler = function (_GameSystem) {
             } else if (e.button === 2) {
                 this.rightDown = true;
             }
+
+            //if ( e.preventDefault ) {
+            //    e.preventDefault();
+            //}
         }
     }, {
         key: 'onMouseLeave',
@@ -946,6 +950,10 @@ var MouseHandler = function (_GameSystem) {
             this.clientX = e.clientX;
             this.clientY = e.clientY;
             this.eventReceived = true;
+
+            //if ( e.preventDefault ) {
+            //    e.preventDefault();
+            //}
         }
     }, {
         key: 'getDeltaX',

@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var babel = require('gulp-babel');
 var concat = require('gulp-concat');
+var del = require('del');
 
 var fileList = require('./ngen_files.json');
 
@@ -14,6 +15,14 @@ var distFolder = './dist';
 gulp.task('default', [
     'babel'
 ]);
+
+
+/**
+ * Deletes all files inside the build folder.
+ */
+gulp.task('clean:build', function() {
+    return del.sync([buildFolder + '/**/*'])
+});
 
 
 /**

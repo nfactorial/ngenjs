@@ -11,6 +11,19 @@ class StateTree {
     }
 
     /**
+     * Locates a system object in the currently active state tree.
+     * @param name {String} Instance name of the system object to be retrieved.
+     * @returns {GameSystem} Reference to the instance associated with the name or null.
+     */
+    findSystem(name) {
+        if ( this.activeState ) {
+            return this.activeState.findSystem(name)
+        }
+
+        return null;
+    }
+
+    /**
      * Creates the game states based on the contents of the supplied data structure.
      * @param data Description of the game-states required by the running title.
      */
